@@ -1,0 +1,109 @@
+#roulette-spinBtn {
+    position : absolute;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    box-sizing : border-box;
+    width : 50%;
+    height : 50%;
+    margin-top : 25%;
+    background-color : orange;
+    box-shadow : 0px 0px 1vmax black, inset 0px 0px 0.75vmax black;
+    border-width : 0.5vmax;
+    border-style : solid;
+    border-color : lightgrey;
+    border-radius : 50%;
+    color : antiquewhite;
+    text-shadow : 0px -1px 0px rgba(0,0,0,.5);
+    font-weight : bold;
+    font-size : 3vmax;
+    user-select: none;
+    animation: rouletteBreath 10s infinite;
+}
+
+@keyframes rouletteBreath {
+    0% {
+        box-shadow : 0px 0px 1vmax black, inset 0px 0px 0.75vmax black;
+        text-shadow : 0px -1px 0px rgba(0,0,0,.5);
+    }
+    50% {
+        box-shadow : 0px 0px 2vmax white, inset 0px 0px 0.75vmax black;
+        text-shadow: 0px 0px 0.25vmax white;
+    }
+    100% {
+        box-shadow : 0px 0px 1vmax black, inset 0px 0px 0.75vmax black;
+        text-shadow : 0px -1px 0px rgba(0,0,0,.5);
+    }
+  }
+
+.roulette-highlightPiece {
+    opacity: 0.75;
+    /* background-color: orange !important; */
+}
+
+.roulette-spinning {
+    background-color: orange !important;
+    cursor: initial !important;
+    color: antiquewhite !important;
+    box-shadow : 0px 0px 1vmax black, inset 0px 0px 0.75vmax black !important;
+    text-shadow : 0px -1px 0px rgba(0,0,0,.5) !important;
+    animation: none !important;
+    pointer-events: none;
+}
+
+#roulette-spinBtn:hover {
+    background-color: #ffc107;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 0px #eee, 0px 0px 0.5vmax white, 2px 2px 0px #707070;
+    box-shadow : 0px 0px 1vmax white, inset 0px 0px 0.75vmax black;
+    animation: none !important;
+}
+
+#roulette-spinBtn:active {
+    transform: scale(0.98);
+    background-color: orange;
+    color: antiquewhite;
+    text-shadow : 0px -1px 0px rgba(0,0,0,.5);
+    box-shadow : 0px 0px 1vmax black, inset 0px 0px 0.75vmax black;
+    animation: none !important;
+}
+
+#roulette-spinHolster {
+    display : flex;
+    justify-content : flex-end;
+    align-items : center;
+    width : 100%;
+    height : 100%;
+    position : absolute;
+}
+
+#roulette-spinner {
+    border-top : 1vmax solid transparent;
+    border-bottom : 1vmax solid transparent;
+    border-left : 1vmax solid lightgrey;
+    margin-right : -1.4vmax;
+}
+
+#roulette-container {
+    box-sizing : border-box;
+    position : relative;
+    height : 0;
+    padding-bottom : 100%;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    border-radius : 50%;
+    box-shadow : 0px 0px 0.25vmax black;
+    border-width : 0.5vmax;
+    border-style : solid;
+    border-color : whitesmoke;
+}
+
+.roulette-section {
+    position : absolute;
+    box-sizing : border-box;
+    width : 100%;
+    height : 100%;
+    border-radius : 50%;
+}

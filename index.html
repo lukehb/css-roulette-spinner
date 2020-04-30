@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module">
+        import { Roulette } from "./script.js";
+
+        window.onload = function () {
+            var roulette = new Roulette([
+                { name: "unobtainable", weight: 0.001, color: "black" },
+                { name: "legendary", weight: 0.005, color: "orange" },
+                { name: "secret", weight: 0.024, color: "DarkMagenta" },
+                { name: "mythic", weight: 0.14, color: "crimson" },
+                { name: "rare", weight: 0.35, color: "green" },
+                { name: "common", weight: 0.48, color: "DodgerBlue" },
+            ]);
+            document.getElementById("outer").append(roulette.getElement());
+
+            roulette.onClick = function() {
+                roulette.spinToRandomSection();
+                //roulette.startSpinning(0, Math.PI * 2.0 * Math.random());
+            }
+
+            roulette.onFinishedSpinning = function(sectionName) {
+                var resElem = document.createElement("div");
+                resElem.innerText = sectionName;
+                document.body.append(resElem);
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="outer" style="width: 90vmin; height: 90vmin;">
+        <!-- <div id="container">
+            <div id="arc1" class="arc"></div>
+            <div id="arc2" class="arc"></div>
+        </div> -->
+    </div>
+
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 # css-roulette-spinner
 A roulette style spinner built entirely using modern CSS, HTML, and JS.
 
+**No dependencies, no bs - 1 CSS file, 1 JS file**
+
 You create the spinner by:
 ```js
 var rouletteConfig = [
